@@ -35,4 +35,4 @@ def getWeightsDistributedInRange(numberOfWeights: int, minWeight: int, maxWeight
     weightTab = []
     for i in range(0, numberOfWeights):
         weightTab.append(int(rangeOfWeight * pow(step, i) + minWeight))
-    return weightTab
+    return list(reversed(weightTab))

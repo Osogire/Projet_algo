@@ -12,13 +12,17 @@ from display import interface, calculateProba
 from hybridProgUsefulFunctions import *
 #from dataFromClassicProgram import room, w, studentsID
 from instanceIntoWeight import getWeigthedOptions
+from instanceIntoWeight import getWeightsDistributedInRange
 from instance import Instance
 
 instance = Instance(65, 10, 6, 5, 30)
 f = open("savedCurrentInstance.txt", 'w')
 f.write(str(instance))    
 f.close()
-options = [-50000, -10000,-5000,-1000, -10, 100000]
+#options = [-50000, -10000,-5000,-1000, -10, 100000]
+options = getWeightsDistributedInRange(5, -50000,-10, 0.5)
+options.append(100000)
+print(options)
 w = getWeigthedOptions(instance.students, len(instance._courses), options)
 room = []
 for i in range(len(instance._courses)):
