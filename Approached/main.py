@@ -15,18 +15,19 @@ from instanceIntoWeight import getWeigthedOptions
 from instanceIntoWeight import getWeightsDistributedInRange
 from instance import Instance
 
-instance = Instance(65, 10, 6, 5, 30)
+_room = 20
+instance = Instance(200, 40, 7, 4, _room)
 f = open("savedCurrentInstance.txt", 'w')
 f.write(str(instance))    
 f.close()
-#options = [-50000, -10000,-5000,-1000, -10, 100000]
-options = getWeightsDistributedInRange(5, -50000,-10, 0.5)
+options = getWeightsDistributedInRange(instance.students[0].nbr_courses, -5000,-1000, 0.5)
+options += list(reversed(getWeightsDistributedInRange(instance.students[0].nbr_choices - instance.students[0].nbr_courses, 10000,5000, 0.5)))
 options.append(100000)
 print(options)
 w = getWeigthedOptions(instance.students, len(instance._courses), options)
 room = []
 for i in range(len(instance._courses)):
-    room.append(38)
+    room.append(_room)
 
 studentsID = []
 for i in range(len(instance.students)):
@@ -70,7 +71,7 @@ projects = getListOfStudent(nbProjects)
 size = nbStudents * nbProjects
 
 # coefficient forcing the project to have the number of students needed (helping more the project with more students)
-coeff = 2000
+coeff = 50000
 roomCoeffed = roomWithCoeff(room, coeff)
 
 # Lagrange parameters
@@ -87,7 +88,7 @@ Q = defaultdict(int)
 for student_index in students:
     for project_index in projects:
         ind1 = getIndex(student_index, project_index, len(projects))
-        Q[(ind1, ind1)] += 25*w[(student_index, project_index)]
+        Q[(ind1, ind1)] += w[(student_index, project_index)]*100
 
 # Constraint 2 : Room per projects => lines 109 and 118 decomment and comment lines 110 & 119 if you don't want to have teh number right on the number of room allowed
 for project_index in projects:
@@ -116,7 +117,7 @@ for student_index in students:
         for project_index_2 in projects:
             ind1 = getIndex(student_index, project_index, len(projects))
             ind2 = getIndex(student_index, project_index_2, len(projects))
-            Q[(ind1, ind2)] += lagrange_parameter_only_one*5
+            Q[(ind1, ind2)] += lagrange_parameter_only_one*instance.students[0].nbr_courses
 
 # Choice of computer
 print("\nChoose Hybrid Computer (h) or Quantum Computer (q) : ")
@@ -134,7 +135,7 @@ else :
     bqm = BinaryQuadraticModel.from_qubo(Q, offset=0)
     sampler = LeapHybridSampler()
     time1 = time.time()
-    results = sampler.sample(bqm, label='Example - Nurse Scheduling')
+    results = sampler.sample(bqm, label='TimeStabling')
 
 execTime = time.time() - time1
 

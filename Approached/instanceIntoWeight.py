@@ -15,8 +15,8 @@ def getWeigthedOptions(students, nbProjects, option_weights):
 
     for student in students:
         for j in range(nbProjects):
-            w[(student.num, j)] = option_weights[5]
-        for j in range(5):
+            w[(student.num, j)] = option_weights[len(option_weights) - 1]
+        for j in range(len(option_weights) - 1):
             w[(student.num, student.choices[j].num)] = option_weights[j]
 
     return w
