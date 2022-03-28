@@ -14,6 +14,7 @@ from hybridProgUsefulFunctions import *
 from instanceIntoWeight import getWeigthedOptions
 from instanceIntoWeight import getWeightsDistributedInRange
 from instance import Instance
+from fixSolution import fixSolution
 
 _room = 20
 instance = Instance(200, 40, 7, 4, _room)
@@ -191,3 +192,6 @@ projectsSolved = getProjectsSolvedFromSched(len(projects), resultsFinal, room)
 # Interface the results
 interface(projectsSolved, "results" + str(time.time()), students, studentsID, w, options)
 
+fixSolution(projectsSolved, instance.students)
+
+interface(projectsSolved, "results" + str(time.time()), students, studentsID, w, options)
