@@ -1,24 +1,26 @@
 import operator
-
-class ProjectSolved:
+from CourseSolved import CourseSolved
+"""
+class CourseSolved:
     '''
-    Project class corresponding to the project divided by student according to their choices 
+    Course class corresponding to the course divided by student according to their choices 
 
-    :member id: identifiant of the project
-    :member students: list of the students for this project
-    :member room: room planned for this project
+    :member id: identifiant of the course
+    :member students: list of the students for this course
+    :member room: room planned for this course
     '''
     # Initialisation of the list of student
     students = []
 
-    # Room planned for the project
+    # Room planned for the course
     room = 0
 
-    # Initialisation of the id and the list of student for the instance of the project
+    # Initialisation of the id and the list of student for the instance of the course
     def __init__(self, id, students, room):
         self.id = id
         self.students = students
         self.room = room 
+"""
 
 def getListOfStudent(n_students):
     '''
@@ -55,68 +57,68 @@ def roomWithCoeff(rooms, coeff):
         roomCoeffed.append(room * coeff)
     return roomCoeffed
 
-def getIndex(student_index, project_index, n_projects):
+def getIndex(student_index, course_index, n_courses):
     '''
-    Get the index of the matrix corresponding to the index of students and projects
-    (opposite of getStudentAndProject)
+    Get the index of the matrix corresponding to the index of students and courses
+    (opposite of getStudentAndCourse)
 
     :param student_index: index of the student
-    :param project_index: index of the project
-    :param n_projects: number of projects
+    :param course_index: index of the course
+    :param n_courses: number of courses
 
     :type student_index: integer
-    :type project_index: integer
-    :type n_projects: integer
+    :type course_index: integer
+    :type n_courses: integer
 
-    :return index: index corresponding to project_student
+    :return index: index corresponding to course_student
     :rtype students: integer
     '''
-    return student_index * n_projects + project_index
+    return student_index * n_courses + course_index
 
-def getStudentAndProject(index, n_projects):
+def getStudentAndCourse(index, n_courses):
     '''
-    Get the indexes of the matrix corresponding to the index of students and projects
+    Get the indexes of the matrix corresponding to the index of students and courses
     (opposite of get_index)
 
-    :param index: index of the project_student
-    :param n_projects: number of projects
+    :param index: index of the course_student
+    :param n_courses: number of courses
 
     :type index: integer
-    :type n_projects: integer
+    :type n_courses: integer
 
-    :return (student_index, project_index): index corresponding to project_student
-    :rtype (student_index, project_index): tuple of integers
+    :return (student_index, course_index): index corresponding to course_student
+    :rtype (student_index, course_index): tuple of integers
     '''
-    return divmod(index, n_projects)
+    return divmod(index, n_courses)
 
 
-def getProjectsSolvedFromSched(n_projects, tmpProjects, room):
+def getCoursesSolvedFromSched(n_courses, tmpCourses, room):
     '''
-    Get the projects from a list
+    Get the courses from a list
 
-    :param n_projects: number of projects
-    :param tmpProjects: dictionnary of project not sorted
-    :param room: list of number of student allowed per project
+    :param n_courses: number of courses
+    :param tmpCourses: dictionnary of course not sorted
+    :param room: list of number of student allowed per course
 
-    :type n_projects: integer
-    :type tmpProjects: dictionnary
+    :type n_courses: integer
+    :type tmpCourses: dictionnary
     :type room: list of integer
 
-    :return projects: dictionnary of projects associated to students
-    :rtype projects: dictionnary of integers
+    :return courses: dictionnary of courses associated to students
+    :rtype courses: dictionnary of integers
     '''
-    for k in range(n_projects):
-        if k not in tmpProjects:
-            tmpProjects[k] = [-1]
+    for k in range(n_courses):
+        if k not in tmpCourses:
+            tmpCourses[k] = [-1]
 
-    # Sort the table of project
-    sortedTableOfProjects = sorted(tmpProjects.items(), key=operator.itemgetter(0))
+    # Sort the table of courses
+    sortedTableOfCourses = sorted(tmpCourses.items(), key=operator.itemgetter(0))
 
-    # Create a table of Project 
-    projects = []
+    # Create a table of Course
+    courses = []
     i = 0
-    for project in sortedTableOfProjects:
-        projects.append(ProjectSolved(project[0],project[1], room[i]))
+    for course in sortedTableOfCourses:
+        courses.append(CourseSolved(course[0],course[1], room[i]))
         i += 1
-    # Return the table of project
-    return projects
+    # Return the table of course
+    return courses

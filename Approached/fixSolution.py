@@ -1,9 +1,9 @@
-import ProjectSolved
+import CourseSolved
 import Student
 import random
 
-def fixSolution(projects, students) :
-    projectsToFix = []
+def fixSolution(courses, students) :
+    coursesToFix = []
     studentsToFix = []
 
     #find students with too much courses
@@ -15,30 +15,30 @@ def fixSolution(projects, students) :
     for studentToFix in studentsToFix :
 
         for course in studentToFix._courses :
-            if isProjectToFix(course) :
-                removeStudentFromProject(studentToFix, course)
+            if isCourseToFix(course) :
+                removeStudentFromCourse(studentToFix, course)
         
         while studentHasTooMuchCourses(studentToFix) :
-            removeStudentFromProject(studentToFix, studentToFix.courses(len(studentToFix._courses)-1))
+            removeStudentFromCourse(studentToFix, studentToFix.courses(len(studentToFix._courses) - 1))
 
-    #find projects to fix
-    for project in projects :
-        if isProjectToFix(project) :
-            projectsToFix.append(project)
+    #find courses to fix
+    for course in courses :
+        if isCourseToFix(course) :
+            coursesToFix.append(course)
 
-    #fix project
-    for projectToFix in projectsToFix :
+    #fix course
+    for courseToFix in coursesToFix :
         #remove students with too much courses
-        for student in project.students :
+        for student in course.students :
             if isStudentToFix(student) :
-                removeStudentFromProject(student, projectToFix)
+                removeStudentFromCourse(student, courseToFix)
         
         #remove randomly some student
-        studentsToMove = len(project.students) - project.room
+        studentsToMove = len(course.students) - course.room
         while(studentsToMove > 0) :
-            studentToRemove = projectToFix.students[random.randint(0, len(project.students))]
-            removeStudentFromProject(studentToRemove, projectToFix)
-            studentsToMove = len(project.students) - project.room
+            studentToRemove = courseToFix.students[random.randint(0, len(course.students))]
+            removeStudentFromCourse(studentToRemove, courseToFix)
+            studentsToMove = len(course.students) - course.room
 
     studentsToFix = []
 
@@ -60,9 +60,9 @@ def fixSolution(projects, students) :
             
         """
         good_choices = []
-        for project in projects :
-            if not isProjectToFix(project) :
-                good_choices.append(project)
+        for course in courses :
+            if not isCourseToFix(course) :
+                good_choices.append(course)
         
         
         for good_choice in good_choices :
@@ -70,19 +70,13 @@ def fixSolution(projects, students) :
                 studentToFix.assign_course(good_choice)
         """
 
-
-def isProjectToFix(project) :
-    if len(project.students) > project.room :
-        return True
-    return False
-
 def isCourseToFix(course) :
-    if len(course._student) > course._places :
+    if len(course.student) > course.places :
         return True
     return False
 
-def isProjectFull(project) :
-    if len(project.students) < project.room :
+def isCourseFull(course) :
+    if len(course.students) < course.room :
         return False
     return True
 
@@ -101,9 +95,9 @@ def studentHasNotEnoughCourses(student) :
         return True
     return False
 
-def removeStudentFromProject(student, project) :
-    project.students.remove(student)
-    student.couses.remove(project)
+def removeStudentFromCourse(student, course) :
+    course.students.remove(student)
+    student.couses.remove(course)
 
 
 

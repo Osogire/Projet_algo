@@ -3,14 +3,14 @@ from collections import defaultdict
 from dwave.system import LeapHybridSampler, DWaveSampler, EmbeddingComposite
 from uuid import uuid1
 from dimod import BinaryQuadraticModel
-import pandas as pd 
+import pandas as pd
 import operator
 import time
-import ProjectSolved
+from CourseSolved import CourseSolved
 import Student
 from display import interface, calculateProba
 from hybridProgUsefulFunctions import *
-#from dataFromClassicProgram import room, w, studentsID
+# from dataFromClassicProgram import room, w, studentsID
 from instanceIntoWeight import getWeigthedOptions
 from instanceIntoWeight import getWeightsDistributedInRange
 from instance import Instance
@@ -19,10 +19,12 @@ from fixSolution import fixSolution
 _room = 20
 instance = Instance(200, 40, 7, 4, _room)
 f = open("savedCurrentInstance.txt", 'w')
-f.write(str(instance))    
+f.write(str(instance))
 f.close()
-options = getWeightsDistributedInRange(instance.students[0].nbr_courses, -5000,-1000, 0.5)
-options += list(reversed(getWeightsDistributedInRange(instance.students[0].nbr_choices - instance.students[0].nbr_courses, 10000,5000, 0.5)))
+options = getWeightsDistributedInRange(instance.students[0].nbr_courses, -5000, -1000, 0.5)
+options += list(reversed(
+    getWeightsDistributedInRange(instance.students[0].nbr_choices - instance.students[0].nbr_courses, 10000, 5000,
+                                 0.5)))
 options.append(100000)
 print(options)
 w = getWeigthedOptions(instance.students, len(instance._courses), options)
@@ -34,52 +36,51 @@ studentsID = []
 for i in range(len(instance.students)):
     studentsID.append("Student " + str(i))
 
-class ProjectSolved:
+"""
+class CourseSolved:
     '''
-    Project class corresponding to the project divided by student according to their choices 
+    Course class corresponding to the course divided by student according to their choices 
 
-    :member id: identifiant of the project
-    :member students: list of the students for this project
-    :member room: room planned for this project
+    :member id: identifiant of the course
+    :member students: list of the students for this course
+    :member room: room planned for this course
     '''
     # Initialisation of the list of student
     students = []
 
-    # Room planned for the project
+    # Room planned for the course
     room = 0
 
-    # Initialisation of the id and the list of student for the instance of the project
+    # Initialisation of the id and the list of student for the instance of the course
     def __init__(self, id, students, room):
         self.id = id
         self.students = students
-        self.room = room 
+        self.room = room
 
+    # --------- BEGIN ---------- #
+"""
 
-# --------- BEGIN ---------- #
-
-# Declaration of students and projets
+# Declaration of students and courses
 nbStudents = len(studentsID) - 1
 print("Number of students : " + str(nbStudents))
 
-
-nbProjects = len(room)
-print("Number of projects : " + str(nbProjects))
-
+nbCourses = len(room)
+print("Number of courses : " + str(nbCourses))
 
 students = getListOfStudent(nbStudents)
-projects = getListOfStudent(nbProjects)
+courses = getListOfStudent(nbCourses)
 
-size = nbStudents * nbProjects
+size = nbStudents * nbCourses
 
-# coefficient forcing the project to have the number of students needed (helping more the project with more students)
+# coefficient forcing the course to have the number of students needed (helping more the course with more students)
 coeff = 50000
 roomCoeffed = roomWithCoeff(room, coeff)
 
 # Lagrange parameters
-# for the room per projects
+# for the room per courses
 lagrange_parameter_room = roomCoeffed
 
-# to force only one project per students
+# to force only one course per students
 lagrange_parameter_only_one = 1000
 
 # Creation of the matrix
@@ -87,42 +88,41 @@ Q = defaultdict(int)
 
 # Objective function
 for student_index in students:
-    for project_index in projects:
-        ind1 = getIndex(student_index, project_index, len(projects))
-        Q[(ind1, ind1)] += w[(student_index, project_index)]*100
+    for course_index in courses:
+        ind1 = getIndex(student_index, course_index, len(courses))
+        Q[(ind1, ind1)] += w[(student_index, course_index)] * 100
 
-# Constraint 2 : Room per projects => lines 109 and 118 decomment and comment lines 110 & 119 if you don't want to have teh number right on the number of room allowed
-for project_index in projects:
+# Constraint 2 : Room per courses => lines 109 and 118 decomment and comment lines 110 & 119 if you don't want to have teh number right on the number of room allowed
+for course_index in courses:
     for student_index in students:
-        ind1 = getIndex(student_index, project_index, len(projects))
-        # Q[(ind1, ind1)] += lagrange_parameter_room[project_index]
-        Q[(ind1, ind1)] -= (2*room[project_index])*lagrange_parameter_room[project_index]
+        ind1 = getIndex(student_index, course_index, len(courses))
+        # Q[(ind1, ind1)] += lagrange_parameter_room[course_index]
+        Q[(ind1, ind1)] -= (2 * room[course_index]) * lagrange_parameter_room[course_index]
 
-
-for project_index in projects:
+for course_index in courses:
     for student_index in range(len(students)):
         for student_index_2 in range(student_index, len(students)):
-            ind1 = getIndex(student_index, project_index, len(projects))
-            ind2 = getIndex(student_index_2, project_index, len(projects))
+            ind1 = getIndex(student_index, course_index, len(courses))
+            ind2 = getIndex(student_index_2, course_index, len(courses))
             # Q[(ind1, ind2)] += 0
-            Q[(ind1, ind2)] += 2*lagrange_parameter_room[project_index]
+            Q[(ind1, ind2)] += 2 * lagrange_parameter_room[course_index]
 
-# Constraint 1 : One project per student
+# Constraint 1 : One course per student
 for student_index in students:
-    for project_index in projects:
-        ind1 = getIndex(student_index, project_index, len(projects))
+    for course_index in courses:
+        ind1 = getIndex(student_index, course_index, len(courses))
         Q[(ind1, ind1)] -= lagrange_parameter_only_one
 
 for student_index in students:
-    for project_index in projects:
-        for project_index_2 in projects:
-            ind1 = getIndex(student_index, project_index, len(projects))
-            ind2 = getIndex(student_index, project_index_2, len(projects))
-            Q[(ind1, ind2)] += lagrange_parameter_only_one*instance.students[0].nbr_courses
+    for course_index in courses:
+        for course_index_2 in courses:
+            ind1 = getIndex(student_index, course_index, len(courses))
+            ind2 = getIndex(student_index, course_index_2, len(courses))
+            Q[(ind1, ind2)] += lagrange_parameter_only_one * instance.students[0].nbr_courses
 
 # Choice of computer
 print("\nChoose Hybrid Computer (h) or Quantum Computer (q) : ")
-ordi = input() 
+ordi = input()
 
 time0 = time.time()
 
@@ -130,8 +130,8 @@ if ordi == 'Q' or ordi == 'q':
     print("You chose the quantum D-wave computer\nSending to the d-wave computer...")
     sampler = EmbeddingComposite(DWaveSampler())
     time1 = time.time()
-    results = sampler.sample_qubo(Q,num_reads=5000)
-else :
+    results = sampler.sample_qubo(Q, num_reads=5000)
+else:
     print("You chose the hybrid D-wave computer\nSending to the d-wave computer...")
     bqm = BinaryQuadraticModel.from_qubo(Q, offset=0)
     sampler = LeapHybridSampler()
@@ -149,7 +149,7 @@ smpl = results.first.sample
 energy = results.first.energy
 time3 = time.time()
 print("Recovery time (s) : " + str(time3 - time2))
-    
+
 print("Size ", size)
 print("Energy ", energy)
 '''
@@ -161,7 +161,7 @@ if(save == 'y'):
     f = open("save" + str(uuid1()) + ".txt", 'w')
     f.write("\nExecution Time : " + str(execTime))
     f.write("\nEmbedding Time : " + str(time0 - time1))
-    f.write("\n\tPlaces par projets : ")
+    f.write("\n\tPlaces par cours : ")
     f.write(str(room))
     f.write("\n\tMatrice Q : ")
     f.write(str(Q))
@@ -178,20 +178,18 @@ resultsFinal = {}
 # Get the results in the wanted format
 for j in range(size):
     if smpl[j] == 1:
-        [student, project] = getStudentAndProject(j, len(projects))
-        if project not in resultsFinal:
-            resultsFinal[project] = [student]
-        else :
-            resultsFinal[project].append(student)
+        [student, course] = getStudentAndCourse(j, len(courses))
+        if course not in resultsFinal:
+            resultsFinal[course] = [student]
+        else:
+            resultsFinal[course].append(student)
 
-
-
-# Get the projects solved
-projectsSolved = getProjectsSolvedFromSched(len(projects), resultsFinal, room)
+# Get the courses solved
+coursesSolved = getCoursesSolvedFromSched(len(courses), resultsFinal, room)
 
 # Interface the results
-interface(projectsSolved, "results" + str(time.time()), students, studentsID, w, options)
+interface(coursesSolved, "results" + str(time.time()), students, studentsID, w, options)
 
-fixSolution(projectsSolved, instance.students)
+fixSolution(coursesSolved, instance.students)
 
-interface(projectsSolved, "results" + str(time.time()), students, studentsID, w, options)
+interface(coursesSolved, "results" + str(time.time()), students, studentsID, w, options)

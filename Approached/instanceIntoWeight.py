@@ -1,20 +1,20 @@
-def getWeigthedOptions(students, nbProjects, option_weights):
+def getWeigthedOptions(students, nbCourses, option_weights):
     '''
     Get choices of students from the choices made in the XLS file
 
     :param students: list of students
-    :param nbProjects: number of projects
+    :param nbCourses: number of courses
 
     :type students: list of integers
-    :type nbProjects: integer
+    :type nbCourses: integer
 
     :return w: options of the students
-    :rtype w: dictionnary {(student, project) : weight  of options} 
+    :rtype w: dictionnary {(student, course) : weight  of options}
     '''
     w = {}
 
     for student in students:
-        for j in range(nbProjects):
+        for j in range(nbCourses):
             w[(student.num, j)] = option_weights[len(option_weights) - 1]
         for j in range(len(option_weights) - 1):
             w[(student.num, student.choices[j].num)] = option_weights[j]
