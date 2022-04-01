@@ -10,7 +10,6 @@ class Course:
         self._student = []
         self._num = num
         self._places = nbr_places
-        self._nbr_choosed = 0
         self._student_choice = []
 
     @property
@@ -30,6 +29,7 @@ class Course:
         student_num = []
         for i in self.students:
             student_num.append(i.num)
+            student_num.sort()
         return student_num
     
     @property
@@ -41,6 +41,12 @@ class Course:
     @places.setter
     def places(self,value):
         self._places = value
+
+    @property
+    def places_remaining(self) -> int:
+        """le nombre de places libres dans de cours
+        """
+        return self.places - len(self.students)
 
     @property
     def num(self) -> int:
@@ -71,7 +77,7 @@ class Course:
         num = []
         for i in self.students_choice:
             num.append(i.num)
-        return num
+        return num.sort()
 
     def __str__(self):
         return "\nCourse " + str(self._num) + " :\n    Students : " + str(self.student_num) + "\n    Students choice : " + str(self.students_choice_num)
@@ -80,4 +86,6 @@ class Course:
         return str(self)
 
     def __eq__(self, other : Self) -> bool:
+        if other == None:
+            return False
         return self.num == other.num

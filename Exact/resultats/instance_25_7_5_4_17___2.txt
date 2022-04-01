@@ -1,0 +1,43 @@
+nbr total : 100
+temps total : 8.568331003189087
+temps moyen total : 0.08568331003189086
+-------------0-------------
+nbr : 41
+temps min : 0.003988742828369141
+temps moyen : 0.005084190963719962
+temps max : 0.007979869842529297
+-------------1-------------
+nbr : 31
+temps min : 0.04687356948852539
+temps moyen : 0.06369865935144015
+temps max : 0.0937490463256836
+-------------2-------------
+nbr : 13
+temps min : 0.12067723274230957
+temps moyen : 0.13491337024606764
+temps max : 0.2049572467803955
+-------------3-------------
+nbr : 10
+temps min : 0.16455912590026855
+temps moyen : 0.34660900104790926
+temps max : 0.4966704845428467
+-------------4-------------
+nbr : 5
+temps min : 0.2707839012145996
+temps moyen : 0.3572656810283661
+temps max : 0.46526312828063965
+-------------5-------------
+nbr : None
+temps min : None
+temps moyen : None
+temps max : None
+-------------6-------------
+nbr : None
+temps min : None
+temps moyen : None
+temps max : None
+-------------7-------------
+nbr : None
+temps min : None
+temps moyen : None
+temps max : None
