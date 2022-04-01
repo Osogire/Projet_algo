@@ -1,4 +1,5 @@
 import copy
+from importlib.resources import read_text
 from pickle import TRUE
 import random
 from re import I
@@ -10,21 +11,21 @@ from sqlalchemy import false, true
 import instance.Course as Course
 from typing_extensions import Self
 
+import instance.Instance as Instance
+
 
 
 
 class Student:
 
-    def __init__(self, num, courses, nbr_choice_courses, nbr_courses):
+    def __init__(self, num, instance):
         self._num = num
         self._choices = []
         self._courses = []
-        #self._satisfaction_value = 200
-        self._nbr_courses = nbr_courses
-        self._nbr_choices = nbr_choice_courses
-        self.choose_courses(copy.copy(courses), nbr_choice_courses)
+        self._instance = instance
+        self.choose_courses(copy.copy(instance.courses), instance.nbr_choices_by_student)
         self._choices_ramaining = copy.copy(self.choices)
-        self._satisfaction_list = self.create_satisfaction_list(nbr_choice_courses, nbr_courses)
+        self._satisfaction_list = self.create_satisfaction_list(instance.nbr_choices_by_student, instance.nbr_courses_by_student)
     
     @property
     def choices(self) ->'list[Course.Course]': 
@@ -109,22 +110,25 @@ class Student:
         for course in self.courses:
             index = self.choices.index(course)
             satisfaction += self._satisfaction_list[index]
-        for i in range (self._nbr_courses - self.nbr_courses_chosen):
+        for i in range (self.instance.nbr_courses_by_student - self.nbr_courses_chosen):
             index = self.choices.index(self.choices_remaining[i])
             satisfaction += self._satisfaction_list[index]
-        return satisfaction / self._nbr_courses
+        return satisfaction / self.instance.nbr_courses_by_student
 
     @property
-    def nbr_courses(self):
-        """Le nombre de cours que doit choisir l'étudiant
-        """
-        return self._nbr_courses
-
+    def instance(self):
+        return self._instance
+    
     @property
-    def nbr_choices(self):
-        """Le nombre de choix de l'étudiant
-        """
-        return self._nbr_choices
+    def depth(self) -> int:
+        depth = 0
+        nbr_courses = self.instance.nbr_courses_by_student
+
+        for i in range (nbr_courses, self.instance.nbr_choices_by_student):
+            if self.choices[i] in self.courses:
+                depth += i - nbr_courses + 1
+        return depth
+    
     def __str__(self):
         return "\nStudent " + str(self.num) + " :\n    Choices : " + str(self.choices_num)+ "\n    Remainig choices : " + str(self.choices_remaining_num) + "\n    Courses : " + str(self.courses_num) + "\n    Satisfaction : " + str(self.satisfaction_value) + "%"
 
@@ -166,7 +170,7 @@ class Student:
         course.students.append(self)
         course.students_choice.remove(self)
         self.choices_remaining.remove(course)
-        if self.nbr_courses_chosen == self._nbr_courses:
+        if self.nbr_courses_chosen == self.instance.nbr_courses_by_student:
            result[0] = True
         if len(course.students) == course.places:
             result[1] = True

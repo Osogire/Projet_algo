@@ -1,0 +1,203 @@
+nbr total : 100
+temps total : 43767.44362998009
+temps moyen total : 437.67443629980085
+-------------0-------------
+nbr : None
+temps min : None
+temps moyen : None
+temps max : None
+-------------1-------------
+nbr : None
+temps min : None
+temps moyen : None
+temps max : None
+-------------2-------------
+nbr : 1
+temps min : 1.9547712802886963
+temps moyen : 1.9547712802886963
+temps max : 1.9547712802886963
+-------------3-------------
+nbr : 1
+temps min : 2.6857738494873047
+temps moyen : 2.6857738494873047
+temps max : 2.6857738494873047
+-------------4-------------
+nbr : 1
+temps min : 10.005293846130371
+temps moyen : 10.005293846130371
+temps max : 10.005293846130371
+-------------5-------------
+nbr : 2
+temps min : 6.4916369915008545
+temps moyen : 7.010772228240967
+temps max : 7.529907464981079
+-------------6-------------
+nbr : 2
+temps min : 15.51685905456543
+temps moyen : 15.59382152557373
+temps max : 15.670783996582031
+-------------7-------------
+nbr : 5
+temps min : 9.278241634368896
+temps moyen : 22.042961567640305
+temps max : 33.37772750854492
+-------------8-------------
+nbr : 2
+temps min : 10.742294788360596
+temps moyen : 12.356048822402954
+temps max : 13.969802856445312
+-------------9-------------
+nbr : 8
+temps min : 12.169012546539307
+temps moyen : 22.6762672662735
+temps max : 89.04588270187378
+-------------10-------------
+nbr : 5
+temps min : 16.77877378463745
+temps moyen : 27.556834846735
+temps max : 46.776939868927
+-------------11-------------
+nbr : 6
+temps min : 17.467281341552734
+temps moyen : 28.727719366550446
+temps max : 53.23872780799866
+-------------12-------------
+nbr : 11
+temps min : 13.633680820465088
+temps moyen : 45.43402889347635
+temps max : 59.57066988945007
+-------------13-------------
+nbr : 7
+temps min : 26.1364688873291
+temps moyen : 42.535572703927755
+temps max : 102.0101957321167
+-------------14-------------
+nbr : 7
+temps min : 30.131627321243286
+temps moyen : 144.01936654374003
+temps max : 191.38259029388428
+-------------15-------------
+nbr : 6
+temps min : 32.89943504333496
+temps moyen : 42.3522614389658
+temps max : 70.65777158737183
+-------------16-------------
+nbr : 5
+temps min : 75.35353803634644
+temps moyen : 229.9126665443182
+temps max : 291.05986285209656
+-------------17-------------
+nbr : 5
+temps min : 52.52642107009888
+temps moyen : 245.51650792360306
+temps max : 458.3020842075348
+-------------18-------------
+nbr : 3
+temps min : 33.2635555267334
+temps moyen : 68.51209098100662
+temps max : 128.17671132087708
+-------------19-------------
+nbr : 3
+temps min : 94.91391921043396
+temps moyen : 195.6767956018448
+temps max : 367.93451380729675
+-------------20-------------
+nbr : 7
+temps min : 87.61988067626953
+temps moyen : 565.9251280985773
+temps max : 939.2080466747284
+-------------21-------------
+nbr : 3
+temps min : 155.46745920181274
+temps moyen : 414.36407244205475
+temps max : 666.2860083580017
+-------------22-------------
+nbr : 4
+temps min : 130.90262532234192
+temps moyen : 628.9239760935307
+temps max : 1826.9084069728851
+-------------23-------------
+nbr : 1
+temps min : 438.3172538280487
+temps moyen : 438.3172538280487
+temps max : 438.3172538280487
+-------------24-------------
+nbr : 1
+temps min : 759.3804953098297
+temps moyen : 759.3804953098297
+temps max : 759.3804953098297
+-------------25-------------
+nbr : None
+temps min : None
+temps moyen : None
+temps max : None
+-------------26-------------
+nbr : None
+temps min : None
+temps moyen : None
+temps max : None
+-------------27-------------
+nbr : None
+temps min : None
+temps moyen : None
+temps max : None
+-------------28-------------
+nbr : 1
+temps min : 2847.894013404846
+temps moyen : 2847.894013404846
+temps max : 2847.894013404846
+-------------29-------------
+nbr : 2
+temps min : 441.4259283542633
+temps moyen : 4439.12033367157
+temps max : 8436.814738988876
+-------------30-------------
+nbr : 1
+temps min : 18585.250643491745
+temps moyen : 18585.250643491745
+temps max : 18585.250643491745
+-------------31-------------
+nbr : None
+temps min : None
+temps moyen : None
+temps max : None
+-------------32-------------
+nbr : None
+temps min : None
+temps moyen : None
+temps max : None
+-------------33-------------
+nbr : None
+temps min : None
+temps moyen : None
+temps max : None
+-------------34-------------
+nbr : None
+temps min : None
+temps moyen : None
+temps max : None
+-------------35-------------
+nbr : None
+temps min : None
+temps moyen : None
+temps max : None
+-------------36-------------
+nbr : None
+temps min : None
+temps moyen : None
+temps max : None
+-------------37-------------
+nbr : None
+temps min : None
+temps moyen : None
+temps max : None
+-------------38-------------
+nbr : None
+temps min : None
+temps moyen : None
+temps max : None
+-------------39-------------
+nbr : None
+temps min : None
+temps moyen : None
+temps max : None
