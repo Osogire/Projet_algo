@@ -5,13 +5,6 @@ from re import I
 from typing import List, Tuple
 from unittest import result
 
-#from sqlalchemy import false, true
-
-#from Course import Course
-
-
-
-
 class Student:
 
     def __init__(self, num, courses, nbr_choice_courses, nbr_courses):

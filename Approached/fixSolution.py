@@ -58,7 +58,7 @@ def fixSolution(courses, students) :
             if studentHasNotEnoughCourses(studentToFix) :
                 studentToFix.assign_course(good_choice)
             
-        """
+
         good_choices = []
         for course in courses :
             if not isCourseToFix(course) :
@@ -67,8 +67,8 @@ def fixSolution(courses, students) :
         
         for good_choice in good_choices :
             if studentHasNotEnoughCourses(studentToFix) :
-                studentToFix.assign_course(good_choice)
-        """
+                addStudentInCourse(studentToFix, good_choice)
+
 
 def isCourseToFix(course) :
     if len(course.student) > course.places :
@@ -97,7 +97,11 @@ def studentHasNotEnoughCourses(student) :
 
 def removeStudentFromCourse(student, course) :
     course.students.remove(student)
-    student.couses.remove(course)
+    student.courses.remove(course)
+
+def addStudentInCourse(student, course) :
+    course.students.append(student)
+    student.courses.append(course)
 
 
 

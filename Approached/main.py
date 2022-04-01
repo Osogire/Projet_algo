@@ -10,7 +10,6 @@ from CourseSolved import CourseSolved
 import Student
 from display import interface, calculateProba
 from hybridProgUsefulFunctions import *
-# from dataFromClassicProgram import room, w, studentsID
 from instanceIntoWeight import getWeigthedOptions
 from instanceIntoWeight import getWeightsDistributedInRange
 from instance import Instance
@@ -35,30 +34,6 @@ for i in range(len(instance._courses)):
 studentsID = []
 for i in range(len(instance.students)):
     studentsID.append("Student " + str(i))
-
-"""
-class CourseSolved:
-    '''
-    Course class corresponding to the course divided by student according to their choices 
-
-    :member id: identifiant of the course
-    :member students: list of the students for this course
-    :member room: room planned for this course
-    '''
-    # Initialisation of the list of student
-    students = []
-
-    # Room planned for the course
-    room = 0
-
-    # Initialisation of the id and the list of student for the instance of the course
-    def __init__(self, id, students, room):
-        self.id = id
-        self.students = students
-        self.room = room
-
-    # --------- BEGIN ---------- #
-"""
 
 # Declaration of students and courses
 nbStudents = len(studentsID) - 1
@@ -152,26 +127,7 @@ print("Recovery time (s) : " + str(time3 - time2))
 
 print("Size ", size)
 print("Energy ", energy)
-'''
-print("\nDo you want to save the data ? (y/n)")
-save = input()
 
-if(save == 'y'):
-    print("Saving the data...")
-    f = open("save" + str(uuid1()) + ".txt", 'w')
-    f.write("\nExecution Time : " + str(execTime))
-    f.write("\nEmbedding Time : " + str(time0 - time1))
-    f.write("\n\tPlaces par cours : ")
-    f.write(str(room))
-    f.write("\n\tMatrice Q : ")
-    f.write(str(Q))
-
-    f.write("\nResults : " + str(smpl))
-    f.write("\n\tSize : " + str(size))
-    f.write("\n\tEnergy : " + str(energy) )
-    f.write("\nResults : \n")
-    f.close()
-'''
 # Declaration 
 resultsFinal = {}
 
