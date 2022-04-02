@@ -3,6 +3,9 @@ import Student
 import random
 
 def fixSolution(courses, students) :
+    """
+    this function helps correcting the solved distribution when a student has too much or not enough courses. And/Or where there is too much student in a course.
+    """
     coursesToFix = []
     studentsToFix = []
 
