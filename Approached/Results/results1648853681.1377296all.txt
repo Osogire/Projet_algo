@@ -1,0 +1,29 @@
+------------ Résultat ------------
+
+
+Pour le projet 0 (5/3)
+   étudiant : 0 => Student 0
+   étudiant : 1 => Student 1
+   étudiant : 5 => Student 5
+   étudiant : 6 => Student 6
+   étudiant : 7 => Student 7
+
+Pour le projet 1 (2/3)
+   étudiant : 0 => Student 0
+   étudiant : 4 => Student 4
+
+Pour le projet 2 (2/3)
+   étudiant : 7 => Student 7
+   étudiant : 8 => Student 8
+
+Pour le projet 3 (2/3)
+   étudiant : 2 => Student 2
+   étudiant : 6 => Student 6
+
+Pour le projet 4 (2/3)
+   étudiant : 2 => Student 2
+   étudiant : 5 => Student 5
+
+Pour le projet 5 (2/3)
+   étudiant : 3 => Student 3
+   étudiant : 8 => Student 8

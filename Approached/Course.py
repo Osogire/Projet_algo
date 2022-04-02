@@ -1,5 +1,7 @@
 from math import fabs
 from typing import List
+#from typing_extensions import Self
+#from Student import Student
 
 
 class Course:

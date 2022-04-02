@@ -1,7 +1,7 @@
 def getWeigthedOptions(students, nbCourses, option_weights):
     '''
     Get choices of students from the choices made in the XLS file
-
+instance.students[0]._nbr_courses
     :param students: list of students
     :param nbCourses: number of courses
 
@@ -9,7 +9,7 @@ def getWeigthedOptions(students, nbCourses, option_weights):
     :type nbCourses: integer
 
     :return w: options of the students
-    :rtype w: dictionnary {(student, course) : weight  of options}
+    :rtype w: dictionnary {(student, course) : weight  of options} 
     '''
     w = {}
 

@@ -1,9 +1,14 @@
 import copy
-from pickle import TRUE
 import random
-from re import I
 from typing import List, Tuple
 from unittest import result
+
+#from sqlalchemy import false, true
+
+#from Course import Course
+
+
+
 
 class Student:
 

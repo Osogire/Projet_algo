@@ -1,6 +1,6 @@
 class CourseSolved:
     '''
-    Course class corresponding to the course divided by student according to their choices
+    Course class corresponding to the course divided by student according to their choices 
 
     :member id: identifiant of the course
     :member students: list of the students for this course

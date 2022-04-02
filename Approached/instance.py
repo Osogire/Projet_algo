@@ -15,6 +15,8 @@ class Instance:
         self.create_students(nbr_students, nbr_choices_by_student, nbr_courses_by_student)
         self._to_assign = copy.copy(self.students)
 
+
+
     @property
     def students(self) -> 'list[Student.Student]': 
         """Les étudiants de l'intance
