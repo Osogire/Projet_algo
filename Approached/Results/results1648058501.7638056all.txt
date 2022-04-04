@@ -1,0 +1,74 @@
+------------ Résultat ------------
+
+
+Pour le projet 0 (8/12)
+   étudiant : 0 => Student 0
+   étudiant : 2 => Student 2
+   étudiant : 12 => Student 12
+   étudiant : 13 => Student 13
+   étudiant : 15 => Student 15
+   étudiant : 17 => Student 17
+   étudiant : 18 => Student 18
+   étudiant : 19 => Student 19
+
+Pour le projet 1 (11/12)
+   étudiant : 0 => Student 0
+   étudiant : 1 => Student 1
+   étudiant : 3 => Student 3
+   étudiant : 4 => Student 4
+   étudiant : 6 => Student 6
+   étudiant : 8 => Student 8
+   étudiant : 10 => Student 10
+   étudiant : 11 => Student 11
+   étudiant : 12 => Student 12
+   étudiant : 13 => Student 13
+   étudiant : 19 => Student 19
+
+Pour le projet 2 (10/12)
+   étudiant : 1 => Student 1
+   étudiant : 3 => Student 3
+   étudiant : 5 => Student 5
+   étudiant : 9 => Student 9
+   étudiant : 11 => Student 11
+   étudiant : 12 => Student 12
+   étudiant : 14 => Student 14
+   étudiant : 15 => Student 15
+   étudiant : 16 => Student 16
+   étudiant : 19 => Student 19
+
+Pour le projet 3 (12/12)
+   étudiant : 0 => Student 0
+   étudiant : 2 => Student 2
+   étudiant : 3 => Student 3
+   étudiant : 4 => Student 4
+   étudiant : 5 => Student 5
+   étudiant : 6 => Student 6
+   étudiant : 7 => Student 7
+   étudiant : 10 => Student 10
+   étudiant : 11 => Student 11
+   étudiant : 16 => Student 16
+   étudiant : 17 => Student 17
+   étudiant : 18 => Student 18
+
+Pour le projet 4 (5/12)
+   étudiant : 4 => Student 4
+   étudiant : 7 => Student 7
+   étudiant : 8 => Student 8
+   étudiant : 9 => Student 9
+   étudiant : 14 => Student 14
+
+Pour le projet 5 (14/12)
+   étudiant : 1 => Student 1
+   étudiant : 2 => Student 2
+   étudiant : 5 => Student 5
+   étudiant : 6 => Student 6
+   étudiant : 7 => Student 7
+   étudiant : 8 => Student 8
+   étudiant : 9 => Student 9
+   étudiant : 10 => Student 10
+   étudiant : 13 => Student 13
+   étudiant : 14 => Student 14
+   étudiant : 15 => Student 15
+   étudiant : 16 => Student 16
+   étudiant : 17 => Student 17
+   étudiant : 18 => Student 18

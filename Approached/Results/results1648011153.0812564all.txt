@@ -1,0 +1,340 @@
+------------ Résultat ------------
+
+
+Pour le projet 0 (15/15)
+   étudiant : 0 => Student 0
+   étudiant : 15 => Student 15
+   étudiant : 19 => Student 19
+   étudiant : 33 => Student 33
+   étudiant : 44 => Student 44
+   étudiant : 58 => Student 58
+   étudiant : 69 => Student 69
+   étudiant : 71 => Student 71
+   étudiant : 76 => Student 76
+   étudiant : 77 => Student 77
+   étudiant : 82 => Student 82
+   étudiant : 91 => Student 91
+   étudiant : 95 => Student 95
+   étudiant : 96 => Student 96
+   étudiant : 97 => Student 97
+
+Pour le projet 1 (15/15)
+   étudiant : 14 => Student 14
+   étudiant : 21 => Student 21
+   étudiant : 29 => Student 29
+   étudiant : 30 => Student 30
+   étudiant : 33 => Student 33
+   étudiant : 41 => Student 41
+   étudiant : 46 => Student 46
+   étudiant : 59 => Student 59
+   étudiant : 78 => Student 78
+   étudiant : 79 => Student 79
+   étudiant : 80 => Student 80
+   étudiant : 82 => Student 82
+   étudiant : 87 => Student 87
+   étudiant : 90 => Student 90
+   étudiant : 92 => Student 92
+
+Pour le projet 2 (15/15)
+   étudiant : 3 => Student 3
+   étudiant : 5 => Student 5
+   étudiant : 9 => Student 9
+   étudiant : 12 => Student 12
+   étudiant : 16 => Student 16
+   étudiant : 23 => Student 23
+   étudiant : 29 => Student 29
+   étudiant : 36 => Student 36
+   étudiant : 46 => Student 46
+   étudiant : 51 => Student 51
+   étudiant : 56 => Student 56
+   étudiant : 57 => Student 57
+   étudiant : 64 => Student 64
+   étudiant : 71 => Student 71
+   étudiant : 81 => Student 81
+
+Pour le projet 3 (14/15)
+   étudiant : 14 => Student 14
+   étudiant : 15 => Student 15
+   étudiant : 16 => Student 16
+   étudiant : 29 => Student 29
+   étudiant : 35 => Student 35
+   étudiant : 38 => Student 38
+   étudiant : 52 => Student 52
+   étudiant : 62 => Student 62
+   étudiant : 74 => Student 74
+   étudiant : 75 => Student 75
+   étudiant : 88 => Student 88
+   étudiant : 90 => Student 90
+   étudiant : 93 => Student 93
+   étudiant : 98 => Student 98
+
+Pour le projet 4 (15/15)
+   étudiant : 11 => Student 11
+   étudiant : 16 => Student 16
+   étudiant : 17 => Student 17
+   étudiant : 28 => Student 28
+   étudiant : 32 => Student 32
+   étudiant : 35 => Student 35
+   étudiant : 37 => Student 37
+   étudiant : 45 => Student 45
+   étudiant : 55 => Student 55
+   étudiant : 60 => Student 60
+   étudiant : 62 => Student 62
+   étudiant : 78 => Student 78
+   étudiant : 84 => Student 84
+   étudiant : 91 => Student 91
+   étudiant : 94 => Student 94
+
+Pour le projet 5 (15/15)
+   étudiant : 2 => Student 2
+   étudiant : 10 => Student 10
+   étudiant : 16 => Student 16
+   étudiant : 21 => Student 21
+   étudiant : 24 => Student 24
+   étudiant : 35 => Student 35
+   étudiant : 39 => Student 39
+   étudiant : 40 => Student 40
+   étudiant : 53 => Student 53
+   étudiant : 57 => Student 57
+   étudiant : 62 => Student 62
+   étudiant : 70 => Student 70
+   étudiant : 81 => Student 81
+   étudiant : 83 => Student 83
+   étudiant : 84 => Student 84
+
+Pour le projet 6 (15/15)
+   étudiant : 6 => Student 6
+   étudiant : 10 => Student 10
+   étudiant : 14 => Student 14
+   étudiant : 30 => Student 30
+   étudiant : 36 => Student 36
+   étudiant : 46 => Student 46
+   étudiant : 48 => Student 48
+   étudiant : 51 => Student 51
+   étudiant : 55 => Student 55
+   étudiant : 56 => Student 56
+   étudiant : 58 => Student 58
+   étudiant : 59 => Student 59
+   étudiant : 66 => Student 66
+   étudiant : 88 => Student 88
+   étudiant : 89 => Student 89
+
+Pour le projet 7 (15/15)
+   étudiant : 7 => Student 7
+   étudiant : 18 => Student 18
+   étudiant : 19 => Student 19
+   étudiant : 22 => Student 22
+   étudiant : 26 => Student 26
+   étudiant : 34 => Student 34
+   étudiant : 50 => Student 50
+   étudiant : 52 => Student 52
+   étudiant : 54 => Student 54
+   étudiant : 67 => Student 67
+   étudiant : 70 => Student 70
+   étudiant : 74 => Student 74
+   étudiant : 87 => Student 87
+   étudiant : 88 => Student 88
+   étudiant : 96 => Student 96
+
+Pour le projet 8 (15/15)
+   étudiant : 4 => Student 4
+   étudiant : 12 => Student 12
+   étudiant : 23 => Student 23
+   étudiant : 24 => Student 24
+   étudiant : 28 => Student 28
+   étudiant : 31 => Student 31
+   étudiant : 34 => Student 34
+   étudiant : 39 => Student 39
+   étudiant : 41 => Student 41
+   étudiant : 55 => Student 55
+   étudiant : 67 => Student 67
+   étudiant : 76 => Student 76
+   étudiant : 94 => Student 94
+   étudiant : 95 => Student 95
+   étudiant : 96 => Student 96
+
+Pour le projet 9 (15/15)
+   étudiant : 4 => Student 4
+   étudiant : 6 => Student 6
+   étudiant : 8 => Student 8
+   étudiant : 20 => Student 20
+   étudiant : 24 => Student 24
+   étudiant : 31 => Student 31
+   étudiant : 38 => Student 38
+   étudiant : 42 => Student 42
+   étudiant : 60 => Student 60
+   étudiant : 66 => Student 66
+   étudiant : 69 => Student 69
+   étudiant : 74 => Student 74
+   étudiant : 80 => Student 80
+   étudiant : 91 => Student 91
+   étudiant : 98 => Student 98
+
+Pour le projet 10 (15/15)
+   étudiant : 6 => Student 6
+   étudiant : 17 => Student 17
+   étudiant : 19 => Student 19
+   étudiant : 20 => Student 20
+   étudiant : 38 => Student 38
+   étudiant : 40 => Student 40
+   étudiant : 50 => Student 50
+   étudiant : 59 => Student 59
+   étudiant : 62 => Student 62
+   étudiant : 63 => Student 63
+   étudiant : 73 => Student 73
+   étudiant : 81 => Student 81
+   étudiant : 85 => Student 85
+   étudiant : 87 => Student 87
+   étudiant : 90 => Student 90
+
+Pour le projet 11 (15/15)
+   étudiant : 0 => Student 0
+   étudiant : 7 => Student 7
+   étudiant : 10 => Student 10
+   étudiant : 13 => Student 13
+   étudiant : 25 => Student 25
+   étudiant : 33 => Student 33
+   étudiant : 37 => Student 37
+   étudiant : 41 => Student 41
+   étudiant : 43 => Student 43
+   étudiant : 58 => Student 58
+   étudiant : 60 => Student 60
+   étudiant : 73 => Student 73
+   étudiant : 79 => Student 79
+   étudiant : 80 => Student 80
+   étudiant : 85 => Student 85
+
+Pour le projet 12 (15/15)
+   étudiant : 0 => Student 0
+   étudiant : 1 => Student 1
+   étudiant : 5 => Student 5
+   étudiant : 26 => Student 26
+   étudiant : 27 => Student 27
+   étudiant : 54 => Student 54
+   étudiant : 55 => Student 55
+   étudiant : 68 => Student 68
+   étudiant : 75 => Student 75
+   étudiant : 77 => Student 77
+   étudiant : 85 => Student 85
+   étudiant : 86 => Student 86
+   étudiant : 89 => Student 89
+   étudiant : 91 => Student 91
+   étudiant : 97 => Student 97
+
+Pour le projet 13 (15/15)
+   étudiant : 1 => Student 1
+   étudiant : 4 => Student 4
+   étudiant : 7 => Student 7
+   étudiant : 13 => Student 13
+   étudiant : 23 => Student 23
+   étudiant : 30 => Student 30
+   étudiant : 32 => Student 32
+   étudiant : 43 => Student 43
+   étudiant : 48 => Student 48
+   étudiant : 57 => Student 57
+   étudiant : 61 => Student 61
+   étudiant : 63 => Student 63
+   étudiant : 65 => Student 65
+   étudiant : 68 => Student 68
+   étudiant : 90 => Student 90
+
+Pour le projet 14 (15/15)
+   étudiant : 3 => Student 3
+   étudiant : 15 => Student 15
+   étudiant : 17 => Student 17
+   étudiant : 28 => Student 28
+   étudiant : 44 => Student 44
+   étudiant : 49 => Student 49
+   étudiant : 51 => Student 51
+   étudiant : 52 => Student 52
+   étudiant : 53 => Student 53
+   étudiant : 68 => Student 68
+   étudiant : 69 => Student 69
+   étudiant : 72 => Student 72
+   étudiant : 93 => Student 93
+   étudiant : 95 => Student 95
+   étudiant : 96 => Student 96
+
+Pour le projet 15 (15/15)
+   étudiant : 25 => Student 25
+   étudiant : 31 => Student 31
+   étudiant : 36 => Student 36
+   étudiant : 37 => Student 37
+   étudiant : 40 => Student 40
+   étudiant : 42 => Student 42
+   étudiant : 45 => Student 45
+   étudiant : 56 => Student 56
+   étudiant : 60 => Student 60
+   étudiant : 65 => Student 65
+   étudiant : 70 => Student 70
+   étudiant : 73 => Student 73
+   étudiant : 79 => Student 79
+   étudiant : 82 => Student 82
+   étudiant : 85 => Student 85
+
+Pour le projet 16 (14/15)
+   étudiant : 5 => Student 5
+   étudiant : 6 => Student 6
+   étudiant : 9 => Student 9
+   étudiant : 14 => Student 14
+   étudiant : 26 => Student 26
+   étudiant : 28 => Student 28
+   étudiant : 32 => Student 32
+   étudiant : 49 => Student 49
+   étudiant : 53 => Student 53
+   étudiant : 72 => Student 72
+   étudiant : 76 => Student 76
+   étudiant : 90 => Student 90
+   étudiant : 93 => Student 93
+   étudiant : 94 => Student 94
+
+Pour le projet 17 (15/15)
+   étudiant : 1 => Student 1
+   étudiant : 8 => Student 8
+   étudiant : 11 => Student 11
+   étudiant : 22 => Student 22
+   étudiant : 27 => Student 27
+   étudiant : 43 => Student 43
+   étudiant : 44 => Student 44
+   étudiant : 63 => Student 63
+   étudiant : 72 => Student 72
+   étudiant : 73 => Student 73
+   étudiant : 78 => Student 78
+   étudiant : 83 => Student 83
+   étudiant : 86 => Student 86
+   étudiant : 88 => Student 88
+   étudiant : 92 => Student 92
+
+Pour le projet 18 (15/15)
+   étudiant : 11 => Student 11
+   étudiant : 32 => Student 32
+   étudiant : 47 => Student 47
+   étudiant : 48 => Student 48
+   étudiant : 51 => Student 51
+   étudiant : 54 => Student 54
+   étudiant : 59 => Student 59
+   étudiant : 61 => Student 61
+   étudiant : 68 => Student 68
+   étudiant : 75 => Student 75
+   étudiant : 84 => Student 84
+   étudiant : 89 => Student 89
+   étudiant : 92 => Student 92
+   étudiant : 97 => Student 97
+   étudiant : 98 => Student 98
+
+Pour le projet 19 (15/15)
+   étudiant : 3 => Student 3
+   étudiant : 18 => Student 18
+   étudiant : 25 => Student 25
+   étudiant : 33 => Student 33
+   étudiant : 34 => Student 34
+   étudiant : 39 => Student 39
+   étudiant : 45 => Student 45
+   étudiant : 47 => Student 47
+   étudiant : 49 => Student 49
+   étudiant : 61 => Student 61
+   étudiant : 64 => Student 64
+   étudiant : 71 => Student 71
+   étudiant : 77 => Student 77
+   étudiant : 79 => Student 79
+   étudiant : 83 => Student 83

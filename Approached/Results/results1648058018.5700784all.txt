@@ -1,0 +1,42 @@
+------------ Résultat ------------
+
+
+Pour le projet 0 (5/7)
+   étudiant : 0 => Student 0
+   étudiant : 1 => Student 1
+   étudiant : 2 => Student 2
+   étudiant : 4 => Student 4
+   étudiant : 9 => Student 9
+
+Pour le projet 1 (5/7)
+   étudiant : 1 => Student 1
+   étudiant : 2 => Student 2
+   étudiant : 4 => Student 4
+   étudiant : 6 => Student 6
+   étudiant : 8 => Student 8
+
+Pour le projet 2 (7/7)
+   étudiant : 0 => Student 0
+   étudiant : 3 => Student 3
+   étudiant : 5 => Student 5
+   étudiant : 6 => Student 6
+   étudiant : 7 => Student 7
+   étudiant : 8 => Student 8
+   étudiant : 9 => Student 9
+
+Pour le projet 3 (7/7)
+   étudiant : 0 => Student 0
+   étudiant : 3 => Student 3
+   étudiant : 5 => Student 5
+   étudiant : 6 => Student 6
+   étudiant : 7 => Student 7
+   étudiant : 8 => Student 8
+   étudiant : 9 => Student 9
+
+Pour le projet 4 (6/7)
+   étudiant : 1 => Student 1
+   étudiant : 2 => Student 2
+   étudiant : 3 => Student 3
+   étudiant : 4 => Student 4
+   étudiant : 5 => Student 5
+   étudiant : 7 => Student 7
