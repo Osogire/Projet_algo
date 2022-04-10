@@ -14,11 +14,11 @@ class View:
             row=1, column=0)
         self.can = self.win.grid_slaves(1, 0)[0]
 
-        tk.Label(self.frame, text="expected area :", font=('Arial', 13)).grid(row=0, column=0, padx=(50, 50))
+        tk.Label(self.frame, text="Aire attendue :", font=('Arial', 13)).grid(row=0, column=0, padx=(50, 50))
         tk.Label(self.frame, text="0", font=('Arial', 13)).grid(row=1, column=0, padx=(50, 50))
-        tk.Label(self.frame, text="area :", font=('Arial', 13)).grid(row=0, column=1, padx=(50, 50))
+        tk.Label(self.frame, text="Aire calculée :", font=('Arial', 13)).grid(row=0, column=1, padx=(50, 50))
         tk.Label(self.frame, text="0", font=('Arial', 13)).grid(row=1, column=1, padx=(50, 50))
-        tk.Label(self.frame, text="number of points :", font=('Arial', 13)).grid(row=0, column=2, padx=(50, 50))
+        tk.Label(self.frame, text="Nombre de points :", font=('Arial', 13)).grid(row=0, column=2, padx=(50, 50))
         tk.Label(self.frame, text="0", font=('Arial', 13)).grid(row=1, column=2, padx=(50, 50))
 
         self.expectedAreaLabel = self.frame.grid_slaves(1, 0)[0]
@@ -27,7 +27,6 @@ class View:
 
         self.pointsToDraw = []
         montecarlo.set_view(self)
-        can = self.win.grid_slaves(0, 0)[0]
         self.create_circle_at(self.can, 0, 0, 10, "black")
         self.win.mainloop()
 
