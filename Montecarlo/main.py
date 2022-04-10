@@ -5,7 +5,7 @@ from montecarlo import Montecarlo
 
 
 
-nbr_points = 100000
+nbr_points = 200000
 
 radius = 10
 circle = Circle(radius)

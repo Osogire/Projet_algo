@@ -17,8 +17,8 @@ class Montecarlo(threading.Thread):
         self._view = None
 
     def add_point(self):
-        x = random.uniform(-self._shape.max_length - 10, self._shape.max_length + 10)
-        y = random.uniform(-self._shape.max_height - 10, self._shape.max_height + 10)
+        x = random.uniform(-self._shape.max_length - 5, self._shape.max_length + 5)
+        y = random.uniform(-self._shape.max_height - 5, self._shape.max_height + 5)
         self._points.append(Point(x, y))
         if self._view != None:
             self._view.numberOfPointsLabel.configure(text=str(len(self._points)))
@@ -32,8 +32,8 @@ class Montecarlo(threading.Thread):
         for point in self._points:
             if self._shape.encompass(point):
                 points_in_area += 1
-        area = points_in_area / len(self._points) * (2 * (self._shape.max_height + 10)) * (
-                2 * (self._shape.max_length + 10))
+        area = points_in_area / len(self._points) * (2 * (self._shape.max_height + 5)) * (
+                2 * (self._shape.max_length + 5))
         if self._view != None:
             self._view.areaLabel.configure(text=str(area))
         return area
