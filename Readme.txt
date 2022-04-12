@@ -1,6 +1,6 @@
 Dans le dossier "Approached" vous trouverez l'algorithme approché.
 
-Dans le dossier "Exact" vous trouverez l'algorithme approché.
+Dans le dossier "Exact" vous trouverez l'algorithme exact.
 
 Le dossier "Instance" est composé des classes d'instance des deux algortihmes
 
